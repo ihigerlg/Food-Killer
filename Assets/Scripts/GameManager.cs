@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     private float _spawnRate = 3f;
 
     [SerializeField] private GameObject _deadMenu;
-    [SerializeField] private GameObject _restartGame;
     [SerializeField] private GameObject _levelMenu;
 
     private bool _spawnActive;

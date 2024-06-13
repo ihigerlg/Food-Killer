@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 2622810988331101551}
   - component: {fileID: 253028392321391013}
   - component: {fileID: 6590085518315833816}
+  - component: {fileID: -7419949279057044150}
+  - component: {fileID: -2482080257529502173}
+  - component: {fileID: 4392120998556396867}
   m_Layer: 0
   m_Name: Burger
   m_TagString: Untagged
@@ -28,7 +31,8 @@ Transform:
   m_GameObject: {fileID: 1765995492758009968}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6.5, y: 6.5, z: 6.5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,6 +56,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -95,3 +100,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.13453068, y: 0.08499592, z: 0.13242115}
   m_Center: {x: -0.0010726675, y: 0.041006554, z: -0.00041902065}
+--- !u!64 &-7419949279057044150
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765995492758009968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4101298594492280764, guid: 17bb0e13d90eb7540a9620e6f74bb614, type: 3}
+--- !u!114 &-2482080257529502173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765995492758009968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb53aa3a93bf9041b9ce99ccdea8989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
+  _boomEffect: {fileID: 6146545414153545492, guid: 61753401622c2a947a30e2147430e97d,
+    type: 3}
+  _isDangerous: 0
+  _isNegative: 0
+--- !u!54 &4392120998556396867
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765995492758009968}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
