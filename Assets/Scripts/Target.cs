@@ -60,7 +60,7 @@ public class Target : MonoBehaviour
 
         if (_isNegative)
         {
-            _gameManager.RemovePoints(15);
+            _gameManager.RemovePoints(20);
         }
 
         Destroy(gameObject);

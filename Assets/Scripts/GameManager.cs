@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private int _index;
     private float _points;
+
     [SerializeField] private int _score;
 
     private float _spawnRate = 3f;
