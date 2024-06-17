@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text _scoreText;
 
     private int _index;
-    private float _points;
+    private int _points;
 
     [SerializeField] private int _score;
 
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             _index = IndexOfRandomObject();
 
             Instantiate(_targets[_index]);
+            AddPoints(1);
         }
     }
 
@@ -73,7 +74,7 @@ public class GameManager : MonoBehaviour
     private void SaveScore()
     {
         if (_points > _score)
-            PlayerPrefs.SetFloat("MaxScore", _points);
+            PlayerPrefs.SetInt("MaxScore", _points);
     }
 
     public void DeadMenu()
@@ -84,11 +85,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    private void OnApplicationQuit()
-    {
         SaveScore();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
