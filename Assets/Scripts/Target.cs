@@ -7,10 +7,10 @@ public class Target : MonoBehaviour
     public Rigidbody _rb;
 
     private int _minForce = 10;
-    private int _maxForce = 17;
+    private int _maxForce = 20;
 
-    private int _posX = 11;
-    private int _randomTorque = 12;
+    private int _posX = 4;
+    private int _randomTorque = 15;
 
     private GameManager _gameManager;
     [SerializeField] private ParticleSystem _boomEffect;
@@ -29,7 +29,7 @@ public class Target : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (transform.position.y < -4)
+        if (transform.position.y < 0)
             Destroy(gameObject);
     }
 
